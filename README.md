@@ -4,7 +4,6 @@
 使用方法
 ```sh
 git clone https://github.com/YlyAyzbl/sniproxy.git
-
+cd sniproxy
 docker-compose up -d
-
 ```
