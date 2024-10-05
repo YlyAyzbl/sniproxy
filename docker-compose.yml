@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  sniproxy:
+    image: ylyayzbl/sniproxy:latest  # 使用您在 DockerHub 上的镜像
+    ports:
+      - "8080:80"
+      - "8443:443"
+    volumes:
+      - ./data:/etc/sniproxy/:ro
+    environment:
+      - HTTP_PROXY
+      - HTTPS_PROXY
+    restart: unless-stopped
